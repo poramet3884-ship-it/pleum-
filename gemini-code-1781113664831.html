@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ ดนตรีไทย ม.5/3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Charm:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #05140b;
+            color: #e6c673;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 0% 0%, transparent 50%, rgba(212, 175, 55, 0.03) 50%, transparent 55%),
+                radial-gradient(circle at 100% 100%, transparent 50%, rgba(212, 175, 55, 0.03) 50%, transparent 55%);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        header {
+            background: linear-gradient(to bottom, rgba(5, 20, 11, 0.95), rgba(5, 20, 11, 0.8));
+            border-bottom: 2px solid #d4af37;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            font-family: 'Charm', cursive;
+            font-size: 2.5rem;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #e6c673;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+        }
+
+        nav a:hover {
+            color: #fff;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .web-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .image-container {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            padding: 20px;
+            background: rgba(5, 20, 11, 0.6);
+            border: 2px solid #d4af37;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: transform 0.4s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.02);
+        }
+
+        .corner-decoration {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #d4af37;
+        }
+        .top-left { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+        .top-right { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+        .bottom-left { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+        .bottom-right { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+        .original-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        footer {
+            background-color: #030d07;
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid #d4af37;
+            font-size: 0.9rem;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #d4af37;
+            color: #05140b;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            z-index: 99;
+            transition: background 0.3s;
+        }
+        .scroll-to-top:hover {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>เว็บไซต์ ดนตรีไทย</h1>
+        <p>ชั้น มัธยมศึกษาปีที่ 5/3</p>
+        <nav>
+            <a href="#section1">หน้าแรก / เครื่องเป่า</a>
+            <a href="#section2">ประเภทเครื่องเป่า</a>
+            <a href="#section3">ศัพท์สังคีต</a>
+            <a href="#section4">รายชื่อผู้จัดทำ</a>
+        </nav>
+    </header>
+
+    <section id="section1" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+            <img src="หน้า 1.png.png" alt="เครื่องดนตรีไทย เครื่องเป่า" class="original-img">
+        </div>
+    </section>
+
+    <section id="section2" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+            <img src="หน้า 3.png.png" alt="ประเภทเครื่องเป่า" class="original-img">
+        </div>
+    </section>
+
+    <section id="section3" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+            <img src="หน้า 2.png.png" alt="ศัพท์สังคีตดนตรีไทย" class="original-img">
+        </div>
+    </section>
+
+    <section id="section4" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+            <img src="หน้า 4.png.png" alt="รายชื่อผู้จัดทำ ม.5/3" class="original-img">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 เว็บไซต์ดนตรีไทย เครื่องเป่า - ชั้น ม.5/3. สงวนลิขสิทธิ์รูปภาพต้นฉบับ</p>
+    </footer>
+
+    <a href="#" class="scroll-to-top">▲</a>
+
+</body>
+</html>
