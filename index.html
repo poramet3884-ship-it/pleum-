@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ศัพท์สังคีดนตรีไทย เครื่องเป่า ม.5/3</title>
+    <title>เว็บไซต์ ดนตรีไทย ม.5/3</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Charm:wght@400;700&display=swap');
 
@@ -65,15 +65,18 @@
 
         nav {
             margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         nav a {
             color: #e6c673;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
-            padding: 5px 10px;
+            padding: 5px 8px;
             border: 1px solid transparent;
         }
 
@@ -82,20 +85,58 @@
             border-bottom: 1px solid #d4af37;
         }
 
+        .counter-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin: 15px auto 0 auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .counter-number {
+            font-weight: bold;
+            color: #fff;
+            background: #05140b;
+            padding: 2px 8px;
+            border-radius: 5px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-reset {
+            background: transparent;
+            border: 1px solid rgba(230, 76, 76, 0.5);
+            color: #ff4c4c;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-reset:hover {
+            background: #ff4c4c;
+            color: #fff;
+        }
+
         .web-section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             position: relative;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         .image-container {
             position: relative;
-            max-width: 700px;
+            max-width: 750px;
             width: 100%;
             padding: 20px;
             background: rgba(5, 20, 11, 0.6);
@@ -106,7 +147,7 @@
         }
 
         .image-container:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         .corner-decoration {
@@ -161,53 +202,106 @@
 <body>
 
     <header>
-        <h1>ศัพท์ สังคีต ดนตรีไทย</h1>
+        <h1>เว็บไซต์ ดนตรีไทย</h1>
         <p>ชั้น มัธยมศึกษาปีที่ 5/3</p>
+        
         <nav>
-            <a href="#section1">หน้าแรก / เครื่องเป่า</a>
-            <a href="#section2">ประเภทเครื่องเป่า</a>
-            <a href="#section3">ศัพท์สังคีต</a>
-            <a href="#section4">รายชื่อผู้จัดทำ</a>
+            <a href="#section1">หน้าแรก</a>
+            <a href="#section2">ส่วนที่ 2</a>
+            <a href="#section3">ส่วนที่ 3</a>
+            <a href="#section4">ส่วนที่ 4</a>
+            <a href="#section5">ส่วนที่ 5</a>
+            <a href="#section6">ส่วนที่ 6</a>
+            <a href="#section7">ส่วนที่ 7</a>
+            <a href="#section8">ส่วนที่ 8</a>
+            <a href="#section9">ส่วนที่ 9</a>
+            <a href="#section10">ผู้จัดทำ</a>
         </nav>
+
+        <div class="counter-box">
+            <span>👁️ ยอดผู้เข้าชมเว็บไซต์:</span>
+            <span id="viewCount" class="counter-number">0</span>
+            <button class="btn-reset" onclick="resetCounter()">รีเซ็ต</button>
+        </div>
     </header>
 
     <section id="section1" class="web-section">
         <div class="image-container">
-            <div class="corner-decoration top-left"></div>
-            <div class="corner-decoration top-right"></div>
-            <div class="corner-decoration bottom-left"></div>
-            <div class="corner-decoration bottom-right"></div>
-            <img src="page1.png" alt="เครื่องดนตรีไทย เครื่องเป่า" class="original-img">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page1.png" alt="ดนตรีไทย หน้า 1" class="original-img">
         </div>
     </section>
 
     <section id="section2" class="web-section">
         <div class="image-container">
-            <div class="corner-decoration top-left"></div>
-            <div class="corner-decoration top-right"></div>
-            <div class="corner-decoration bottom-left"></div>
-            <div class="corner-decoration bottom-right"></div>
-            <img src="page3.png" alt="ประเภทเครื่องเป่า" class="original-img">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page2.png" alt="ดนตรีไทย หน้า 2" class="original-img">
         </div>
     </section>
 
     <section id="section3" class="web-section">
         <div class="image-container">
-            <div class="corner-decoration top-left"></div>
-            <div class="corner-decoration top-right"></div>
-            <div class="corner-decoration bottom-left"></div>
-            <div class="corner-decoration bottom-right"></div>
-            <img src="page2.png" alt="ศัพท์สังคีตดนตรีไทย" class="original-img">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page3.png" alt="ดนตรีไทย หน้า 3" class="original-img">
         </div>
     </section>
 
     <section id="section4" class="web-section">
         <div class="image-container">
-            <div class="corner-decoration top-left"></div>
-            <div class="corner-decoration top-right"></div>
-            <div class="corner-decoration bottom-left"></div>
-            <div class="corner-decoration bottom-right"></div>
-            <img src="page4.png" alt="รายชื่อผู้จัดทำ ม.5/3" class="original-img">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page4.png" alt="ดนตรีไทย หน้า 4" class="original-img">
+        </div>
+    </section>
+
+    <section id="section5" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page5.png" alt="ดนตรีไทย หน้า 5" class="original-img">
+        </div>
+    </section>
+
+    <section id="section6" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page6.png" alt="ดนตรีไทย หน้า 6" class="original-img">
+        </div>
+    </section>
+
+    <section id="section7" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page7.png" alt="ดนตรีไทย หน้า 7" class="original-img">
+        </div>
+    </section>
+
+    <section id="section8" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page8.png" alt="ดนตรีไทย หน้า 8" class="original-img">
+        </div>
+    </section>
+
+    <section id="section9" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page9.png" alt="ดนตรีไทย หน้า 9" class="original-img">
+        </div>
+    </section>
+
+    <section id="section10" class="web-section">
+        <div class="image-container">
+            <div class="corner-decoration top-left"></div><div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div><div class="corner-decoration bottom-right"></div>
+            <img src="page10.png" alt="ดนตรีไทย หน้า 10" class="original-img">
         </div>
     </section>
 
@@ -217,5 +311,31 @@
 
     <a href="#" class="scroll-to-top">▲</a>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentViews = localStorage.getItem("thaiMusicViews");
+            
+            if (currentViews === null) {
+                currentViews = 1;
+            } else {
+                currentViews = parseInt(currentViews) + 1;
+            }
+            
+            localStorage.setItem("thaiMusicViews", currentViews);
+            document.getElementById("viewCount").innerText = currentViews.toLocaleString();
+        });
+
+        function resetCounter() {
+            const password = prompt("กรุณากรอกรหัสผ่านเพื่อรีเซ็ตยอดผู้เข้าชม:");
+            
+            if (password === "1423pora") {
+                localStorage.setItem("thaiMusicViews", 0);
+                document.getElementById("viewCount").innerText = "0";
+                alert("รีเซ็ตยอดผู้เข้าชมเรียบร้อยแล้ว!");
+            } else if (password !== null) {
+                alert("รหัสผ่านไม่ถูกต้อง! ไม่สามารถรีเซ็ตได้");
+            }
+        }
+    </script>
 </body>
 </html>
